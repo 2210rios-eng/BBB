@@ -10,22 +10,22 @@
 <body style="margin: 0; overflow: hidden;">
   
   <a-scene 
-    mindar-image="imageTargetSrc: ./targets.mind;" 
+    mindar-image="imageTargetSrc: ./aa.mind;" 
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights: true" 
     vr-mode-ui="enabled: false" 
     device-orientation-permission-ui="enabled: false">
     
     <a-assets>
-      <!-- 你的 3D 模型檔案 -->
-      <a-asset-item id="plantModel" src="./model.glb"></a-asset-item>
+      <!-- 對應你的 3D 模型檔案 aquarium.glb -->
+      <a-asset-item id="plantModel" src="./aquarium.glb"></a-asset-item>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
     <!-- 綁定第一張辨識圖 (targetIndex: 0) -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <!-- 載入 3D 模型，可透過 scale 調整大小，position 調整位置 -->
+      <!-- 載入 3D 模型，可透過 scale 調整大小 -->
       <a-gltf-model 
         src="#plantModel" 
         position="0 0 0" 
